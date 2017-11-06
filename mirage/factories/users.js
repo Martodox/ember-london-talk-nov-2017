@@ -7,7 +7,7 @@ export default Factory.extend({
   surname() {
     return faker.name.lastName()
   },
-  DOB() {
+  dob() {
     return faker.date.past()
   },
   city() {
