@@ -23,7 +23,7 @@ export default Model.extend({
       title: 'From'
     }
   }),
-  likesTrains: attr('string', {
+  likesTrains: attr('boolean', {
     table: {
       title: 'Likes Trains'
     }

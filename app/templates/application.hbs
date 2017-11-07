@@ -1,5 +1,13 @@
 <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
     <a class="navbar-brand" href="#">Ember London Talk - Bartosz Jakubowiak</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            {{#link-to 'table' classNames="nav-link"}}First table{{/link-to}}
+        </li>
+        <li class="nav-item">
+            {{#link-to 'better-table' classNames="nav-link"}}Better table{{/link-to}}
+        </li>
+    </ul>
 </nav>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->

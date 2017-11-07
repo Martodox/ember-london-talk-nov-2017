@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('table', {path: '/'});
+  this.route('better-table');
 });
 
 export default Router;
