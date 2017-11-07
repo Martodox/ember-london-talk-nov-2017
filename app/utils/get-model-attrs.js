@@ -7,8 +7,8 @@ export default function getModelAttrs(model, key, fn = null) {
   assert('model object is required', model);
   assert('key is required', key);
 
-  let attributes = get(model, 'attributes'),
-      ret = [];
+  const attributes = get(model, 'attributes');
+  const ret = [];
 
   assert('model must have attributes object', !isEmpty(attributes));
 

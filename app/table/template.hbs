@@ -1,10 +1,1 @@
-{{#models-table showGlobalFilter=false useFilteringByColumns=false data=users columns=columns as |mt|}}
-    {{#mt.table as |table|}}
-        {{table.header classNames="thead-inverse"}}
-        {{table.body}}
-        {{table.footer}}
-    {{/mt.table}}
-    {{#mt.footer as |footer|}}
-        {{footer.pagination-numeric}}
-    {{/mt.footer}}
-{{/models-table}}
+{{models-table showGlobalFilter=false useFilteringByColumns=false useNumericPagination=true data=users columns=columns}}

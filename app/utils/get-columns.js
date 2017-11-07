@@ -1,12 +1,10 @@
 import getModelAttrs from './get-model-attrs';
 
 let getModelsTableColumns = function(value, key, name) {
-  let propertyName = value.propertyName || name.camelize,
-      className = value.className || name.dasherize;
   return Object.assign(value, {
     modelKey: name,
-    propertyName: propertyName,
-    className: className
+    propertyName: value.propertyName || name,
+    className: value.className || name.dasherize()
   });
 };
 
