@@ -1,12 +1,9 @@
 import Route from '@ember/routing/route';
-
-const { get } = Ember;
+import { get } from '@ember/object';
 
 export default Route.extend({
-  model() {
+  async model() {
     this._super(...arguments);
-
-    return get(this, 'store').findAll('user');
-
+    return await get(this, 'store').findAll('user');
   }
 });

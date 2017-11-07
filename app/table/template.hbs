@@ -1,28 +1,10 @@
-<table class="table">
-    <thead  class="thead-inverse">
-    <tr>
-        <th>name</th>
-        <th>surname</th>
-        <th>DOB</th>
-        <th>city</th>
-        <th>likesTrains</th>
-        <th>details</th>
-    </tr>
-    </thead>
-    <tbody>
-        {{#each model as |user|}}
-
-            <tr>
-
-                <td>{{user.name}}</td>
-                <td>{{user.surname}}</td>
-                <td>{{user.dob}}</td>
-                <td>{{user.city}}</td>
-                <td>{{user.likesTrains}}</td>
-                <td>{{user.details}}</td>
-
-            </tr>
-
-        {{/each}}
-    </tbody>
-</table>
+{{#models-table showGlobalFilter=false useFilteringByColumns=false data=users columns=columns as |mt|}}
+    {{#mt.table as |table|}}
+        {{table.header classNames="thead-inverse"}}
+        {{table.body}}
+        {{table.footer}}
+    {{/mt.table}}
+    {{#mt.footer as |footer|}}
+        {{footer.pagination-numeric}}
+    {{/mt.footer}}
+{{/models-table}}
